@@ -21,7 +21,7 @@
     │   ├── php.ini           
     │   ├── php-fpm.conf        
     │   └── yaf.ini             
-    ├── 8.3
+    ├── php8.3
     │   ├── php.ini   
     │   ├── php-fpm.conf   
     │   └── yaf.ini   
