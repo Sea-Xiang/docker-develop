@@ -99,8 +99,8 @@ services:
       - hyperf_net
 
   es-server:
-    container_name: es-7.16.0
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.16.0'
+    container_name: es-7.17.10
+    build: ./es
     networks:
       - hyperf_net
     environment:
