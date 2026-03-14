@@ -111,3 +111,14 @@ services:
       - "9299:9300"
     volumes:
       - ./data/es:/usr/share/elasticsearch/data
+
+  kibana-server:
+    container_name: kibana-7.17.10
+    image: docker.elastic.co/kibana/kibana:7.17.10
+    networks:
+      - hyperf_net
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-server:9200
+      - I18N_LOCALE=zh-CN
