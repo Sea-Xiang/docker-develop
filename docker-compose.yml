@@ -95,18 +95,18 @@ services:
     networks:
       - hyperf_net
 
-#  es-server:
-#    container_name: es-7.17.10
-#    build: ./es
-#    networks:
-#      - hyperf_net
-#    environment:
-#      - "discovery.type=single-node"
-#      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-#    ports:
-#      - "9199:9200"
-#    volumes:
-#      - ./data/es:/usr/share/elasticsearch/data
+  es-server:
+    container_name: es-7.17.10
+    build: ./es
+    networks:
+      - hyperf_net
+    environment:
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - ./data/es:/usr/share/elasticsearch/data
 
 #  kibana-server:
 #    container_name: kibana-7.17.10
